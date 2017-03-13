@@ -37,7 +37,10 @@
     var textArea = document.querySelector('.CodeMirror');
 
     var myCustomCodeMirror = CodeMirror.fromTextArea(textArea,{
-        mode:'php',
+        mode:'htmlmixed',
+        indentUnit:4,
+        tabSize:4,
+
         lineNumbers: true,
         lineWrapping: true,
         extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
